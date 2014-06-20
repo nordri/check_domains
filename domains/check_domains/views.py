@@ -15,6 +15,6 @@ def view_domain(request):
     d = (domain.name, daysLeft)
     domainList.append(d)
     
-  return render_to_response('domains/view_domains.html',{ 'domainList':domainsList }, context_instance=RequestContext(request))
+  return render_to_response('domains/view_domains.html',{ 'domainList':domainList }, context_instance=RequestContext(request))
   
 
