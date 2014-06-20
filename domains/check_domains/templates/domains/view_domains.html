@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>
+      Domain Administration
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href='{% static 'style/stylesheet.css' %}'/>
+  </head>
+  <body>
+  {% load staticfiles %}
+  <img src="{% static 'dominios/static/image/barney-gumble-1601.gif' %}" alt="My image"/>
+
+  <div id=tilte>
+    DOMAIN ADMINISTRATION
+  </div>
+  <div id=subtitle>
+    A little app to manage expiration dates on domains
+  </div>
+  
+{% for domain in domainList %}
+
+<div id=content>
+  Name dominio: {{ domain.0 }}<br/>
+  Expires on {{ domain.1 }}
+</div>
+
+{% endfor %}
+
+</body>
+</html>
