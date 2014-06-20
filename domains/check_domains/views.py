@@ -11,7 +11,7 @@ def view_domain(request):
   domainList = []
   domains = Domain.objects.all().order_by('days')
   for domain in domains:
-    daysLeft = daysRemaining (domain.days, datetime.now().date())
+    daysLeft = daysRemaining (domain.days, datetime.today().date())
     d = (domain.name, daysLeft)
     domainList.append(d)
     
