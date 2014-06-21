@@ -8,23 +8,24 @@
       <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}"/>
   </head>
   <body>
-  <div id="head">
-    <div id="title">
-      DOMAIN ADMINISTRATION
+  <div id="MainContainer">
+    <div id="head">
+      <div id="title">
+        DOMAIN ADMINISTRATION
+      </div>
+      <div id="subtitle">
+        little app to manage expiration dates on domains
+      </div>
     </div>
-    <div id="subtitle">
-      A little app to manage expiration dates on domains
+    <div id="ContentContainer">
+      {% for domain in domainList %}
+      <div id="domain">
+        Name: {{ domain.0 }}<br/>
+        Expires on {{ domain.1 }}
+      </div>
+      {% endfor %}
     </div>
-  </div>
-  
-{% for domain in domainList %}
-
-<div id="content">
-  Name: {{ domain.0 }}<br/>
-  Expires on {{ domain.1 }}
-</div>
-
-{% endfor %}
+  </div> <!-- end MainContainer -->
 
 </body>
 </html>
