@@ -8,17 +8,18 @@
       <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}"/>
   </head>
   <body>
-
-  <div id=tilte>
-    DOMAIN ADMINISTRATION
-  </div>
-  <div id=subtitle>
-    A little app to manage expiration dates on domains
+  <div id="head">
+    <div id="title">
+      DOMAIN ADMINISTRATION
+    </div>
+    <div id="subtitle">
+      A little app to manage expiration dates on domains
+    </div>
   </div>
   
 {% for domain in domainList %}
 
-<div id=content>
+<div id="content">
   Name: {{ domain.0 }}<br/>
   Expires on {{ domain.1 }}
 </div>

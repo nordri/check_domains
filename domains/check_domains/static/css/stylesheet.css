@@ -1,10 +1,11 @@
 #title {
-  color:#42A7FF;
-  font-style:italic;
-  text-align:center;
-  width:300px;
-  margin:10px auto;
- }
+  color: #42a7ff;
+  font-size: 60px;
+  font-style: italic;
+  margin: 10px auto;
+  text-align: right;
+  width: 600px;
+}
 #subtitle {
   color:#42A7FF;
   font-style:italic;
