@@ -8,17 +8,16 @@
 #head {
   text-align:center;
   font-style:bold;
-  color:#084697;
-  background-color:#043F8C;
+  color:#CECEF6;
+  background-color:#0000FF;
 }
 #title {
-    color: #42a7ff;
     font-size: 60px;
     font-weight: bold;
     margin: 10px;
+    letter-spacing: 3px;
 }
 #subtitle {
-  color: #42a7ff;
   font-style:italic;
   font-size:30px;
   text-align:right;
@@ -36,5 +35,16 @@
   border-radius:25px;
   background-color:#A5AEBA;
   margin:20px;
-  float:left;
-} 
+  float:inheretic;
+}
+#footer {
+  font-family:arial;
+  width: 50%;
+  text-align:center;
+  background-color:#0000FE;
+  margin:0 auto;
+  color:#FFFFFF;
+}
+p {
+  margin:20px;
+}

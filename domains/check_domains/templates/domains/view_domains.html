@@ -20,12 +20,16 @@
     <div id="ContentContainer">
       {% for domain in domainList %}
       <div id="domain">
-        Name: {{ domain.0 }}<br/>
-        Expires on {{ domain.1 }}
+        <p>Name: {{ domain.0 }}</p>
+        <p>Expires on {{ domain.1 }}</p>
       </div>
       {% endfor %}
     </div>
   </div> <!-- end MainContainer -->
+  <div id="footer">
+    <p>(c) 2014 Fede Diaz - nordri (at) gmail.com</p>
+    <p>This is free software. Free software is software that gives you the user the freedom to share, study and modify it. We call this free software because the user is free.</p>
+  </div>
 
 </body>
 </html>
