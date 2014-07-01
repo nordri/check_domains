@@ -1,3 +1,4 @@
+<!DOCTYPE HTML> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>
@@ -8,6 +9,7 @@
       <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}"/>
   </head>
   <body>
+  
   <div id="MainContainer">
     <div id="head">
       <div id="title">
@@ -18,11 +20,19 @@
       </div>
     </div>
     <div id="ContentContainer">
+      <p>Filter: {{ days_left }} days</p>
       {% for domain in domainList %}
-      <div id="domain">
-        <p>Name: {{ domain.0 }}</p>
-        <p>Expires on {{ domain.1 }}</p>
-      </div>
+        {% if domain.1 > days_left|add:0 %}
+          <div id="domain_ok">
+            <p>Name: {{ domain.0 }}</p>
+            <p>Expires on {{ domain.1 }} days</p>
+          </div>
+        {% else %}
+          <div id="domain_bad">
+            <p>Name: {{ domain.0 }}</p>
+            <p>Expires on {{ domain.1 }} days</p>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div> <!-- end MainContainer -->

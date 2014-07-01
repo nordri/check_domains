@@ -30,10 +30,17 @@
   text-align:center;
   margin:10px auto;
 }
-#domain {
+#domain_ok {
   border:2px solid;
   border-radius:25px;
-  background-color:#A5AEBA;
+  background-color:#01DF01;
+  margin:20px;
+  float:inheretic;
+}
+#domain_bad {
+  border:2px solid;
+  border-radius:25px;
+  background-color:#FF0000;
   margin:20px;
   float:inheretic;
 }
