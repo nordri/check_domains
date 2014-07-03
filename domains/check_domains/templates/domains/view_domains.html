@@ -1,4 +1,4 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>
@@ -20,6 +20,13 @@
       </div>
     </div>
     <div id="ContentContainer">
+      <form action="." method="post">{% csrf_token %}
+        {% for field in form %}
+          <p> {{ field.filterByDays }}</p>
+        {% endfor %}
+
+        <input type="submit" name="submit" value="Go">
+      </form>
       <p>Filter: {{ days_left }} days</p>
       {% for domain in domainList %}
         {% if domain.1 > days_left|add:0 %}

@@ -11,3 +11,6 @@ class Domain(models.Model):
   def __unicode__(self):
     return self.name
 
+class Filter(models.Model):
+  filterByDays = models.IntegerField()
+  
