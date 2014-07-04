@@ -1,4 +1,6 @@
 from django.db import models
+from django import forms
+from django.forms import ModelForm
 
 # Create your models here.
 class Domain(models.Model):
@@ -13,4 +15,13 @@ class Domain(models.Model):
 
 class Filter(models.Model):
   filterByDays = models.IntegerField()
+  
+class FilterForm(ModelForm):
+  class Meta:
+    filterByDays = forms.CharField(widget=forms.TextInput)
+    widget = {
+      filterByDays: forms.TextInput(),
+      }
+    model = Filter
+    fields = ['filterByDays']
   
